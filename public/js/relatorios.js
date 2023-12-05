@@ -333,16 +333,16 @@ function referentesDados() {
 
 function formatarData(data) {
     const partesData = data.split("-");
-    const dia = partesData[2];
-    const mes = partesData[1];
+    const dia = partesData[2].padStart(2, '0');
+    const mes = partesData[1].padStart(2, '0');
     const ano = partesData[0];
     return `${dia}/${mes}/${ano}`;
 }
 
 function formatarDataInversa(data) {
     const partesData = data.split("/");
-    const dia = partesData[0];
-    const mes = partesData[1];
+    const dia = partesData[0].padStart(2, '0');
+    const mes = partesData[1].padStart(2, '0');
     const ano = partesData[2];
     const dataFormatada = `${ano}/${mes}/${dia}`;
     return dataFormatada.replaceAll("/", "-");
